@@ -1,0 +1,40 @@
+---
+import Particles from "astro-particles";
+import type { ISourceOptions } from "tsparticles-engine";
+
+const options = {
+    background: {
+        color: "#fff"
+    },
+    fullScreen: {
+        zIndex: -1
+    },
+    particles: {
+        color: {
+            value: "#f00"
+        },
+        links: {
+            color: "#f00",
+            enable: true
+        },
+        number: {
+            value: 100
+        },
+        move: {
+            enable: true
+        }
+    }
+};
+---
+
+<script>
+    import { type Engine, tsParticles } from "tsparticles-engine";
+    import { loadFull } from "tsparticles";
+
+    window.particlesInit = async (engine: Engine) => {
+        await loadFull(engine);
+    };
+</script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.0.6/tsparticles.slim.bundle.min.js" is:inline></script>
+ -->
+ <Particles id="tsparticles" options={options} init="particlesInit" />

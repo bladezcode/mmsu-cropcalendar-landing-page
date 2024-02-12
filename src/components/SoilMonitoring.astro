@@ -1,0 +1,217 @@
+---
+import { Image } from "astro:assets";
+import Location from "../assets/locale.png";
+import Weather from "../assets/heatmapcalendar 2.png";
+---
+
+<div class="layout-inputs">
+    <div class="realtime">
+        <div class="title" style="text-align: center;">
+            <h2 style="color: white;">
+                <span style="color: #35D374;">Field Inputs</span> and <span
+                    style="color: #FAC12F;">Resource monitoring</span
+                >
+            </h2>
+            <h4>
+                <span
+                    >Real-time field monitoring and built-In <br /> sensor interval
+                    controller</span
+                >
+            </h4>
+        </div>
+        <div class="hero-section">
+            <div class="features-grid">
+                <div class="box nitrogen">
+                    <h3 style="color: #35D374;">Nitrogen</h3>
+                    <p>
+                        Nitrogen is crucial for plant growth and photosynthesis
+                        as it's part of chlorophyll, aiding leaf growth.
+                        However, excessive nitrogen can lead to oversized cells
+                        and soft leaves prone to pathogens. It also consumes
+                        carbohydrates, affecting overall growth.
+                    </p>
+                </div>
+                <div class="box phosphorus">
+                    <h3 style="color:#E55151;">Phosphorus</h3>
+                    <p>
+                        Phosphorus is essential for plants, aiding root growth,
+                        winter hardiness, seed formation, and water efficiency.
+                        Without enough phosphorus, plant growth slows, and
+                        recovery is difficult even with supplementation. It's
+                        also crucial for capturing and converting solar energy
+                        for growth and reproduction.
+                    </p>
+                </div>
+                <div class="box potassium">
+                    <h3 style="color:#E2E551;">Potassium</h3>
+                    <p>
+                        Potassium is crucial for plant nutrition, aiding in
+                        various chemical reactions, regulating element
+                        absorption, and promoting the production of essential
+                        compounds. It also enhances plants' resilience to
+                        drought and disease.
+                    </p>
+                </div>
+                <div class="box temperature">
+                    <h3 style="color: #D1713B;">Temperature</h3>
+                    <p>
+                        Soil temperature is crucial for plant growth, impacting
+                        factors like seed germination, root growth, nutrient
+                        absorption, and microbial activity. Various factors,
+                        including soil moisture, aeration, and tillage,
+                        influence how plants absorb potassium.
+                    </p>
+                </div>
+            </div>
+            <Image src={Location} alt="MMSU Field COE" class="field-img" />
+        </div>
+    </div>
+    <div class="historical">
+        <div class="title" style="text-align: center;">
+            <h2>
+                <span style="color: #30E2ED;">Historical Weather Data</span> from
+                Local <br />
+                <span style="color: #30E2ED;">PAG-ASA</span> Agrometeorological Station
+            </h2>
+            <h4>
+                <span
+                    >Weather variables that significantly affect <br />crops and
+                    seasonal trends</span
+                >
+            </h4>
+        </div>
+        <div class="hero-section">
+            <Image
+                src={Weather}
+                alt="weather rainfall batac"
+                class="field-img"
+            />
+            <div class="features-grid">
+                <div class="box Temperature">
+                    <h3 style="color: #30E2ED;">Temperature</h3>
+                    <p>
+                        Temperature significantly influences crop growth by
+                        impacting processes like photosynthesis, transpiration,
+                        and respiration. Extreme temperatures can harm crop
+                        yield, making optimal temperature management crucial.
+                    </p>
+                </div>
+                <div class="box Relhum">
+                    <h3 style="color: #30E2ED;">Humidity</h3>
+                    <p>
+                        Humidity significantly influences crop growth by
+                        affecting plant turgor pressure and the rate of
+                        transpiration. Maintaining an optimal humidity level is
+                        crucial for healthy plant growth and maximizing crop
+                        yield.
+                    </p>
+                </div>
+                <div class="box Solarrad">
+                    <h3 style="color: #30E2ED;">Solar Radiation</h3>
+                    <p>
+                        The amount and duration of sunlight directly affect how
+                        fast plants grow and produce crops. Right sunlight
+                        levels are needed for healthy growth, but too much can
+                        harm crops with heat stress. Keeping a balanced sunlight
+                        level is key for getting the most out of crops
+                    </p>
+                </div>
+                <div class="box Precipitation">
+                    <h3 style="color: #30E2ED;">Precipitation</h3>
+                    <p>
+                        Precipitation is vital for crop growth, but drought can
+                        cause water stress and yield reduction, while excessive
+                        rainfall can lead to poor germination and soil erosion.
+                        Balanced precipitation patterns are essential for
+                        optimal crop growth and yield.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style lang="scss">
+    .layout-inputs {
+        background: linear-gradient(
+            180deg,
+            #1e2320 0%,
+            rgba(0, 0, 0, 0.77) 83%,
+            rgba(30, 35, 32, 0.85) 100%
+        );
+        color: white;
+    }
+    .realtime,
+    .historical {
+        min-height: 95vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+    .hero-section {
+        display: grid;
+        max-width: 1280px;
+        padding: 0 1.25rem;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr 1fr;
+
+        .features-grid {
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            row-gap: 2%;
+            gap: 2%;
+        }
+    }
+    @media (max-width: 1200px) {
+        .hero-section {
+            display: grid;
+            grid-auto-flow: row;
+            grid-template-columns: clamp(200px, 100%, 400px);
+            justify-content: center;
+            gap: 3%;
+        }
+        .features-grid {
+            order: 1;
+        }
+    }
+    .field-img {
+        width: max(200px, 90%);
+        height: auto;
+        align-self: center;
+        justify-self: center;
+        border-radius: 0.75rem;
+    }
+    .box:hover {
+        background-color: #434343;
+        border-radius: 0.8125rem;
+    }
+    .box {
+        user-select: none;
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1rem;
+        h3 {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            font-weight: bold;
+        }
+        p {
+            font-size: clamp(0.65rem, 0.8vw, 1rem);
+        }
+    }
+    .title {
+        h2 {
+            font-size: clamp(0.875rem, 2vw + 0.875rem, 2.5rem);
+            font-weight: 600;
+            margin-bottom: 3%;
+        }
+        h4 {
+            font-size: clamp(0.875rem, 1vw + 0.875rem, 1.15rem);
+        }
+    }
+</style>
