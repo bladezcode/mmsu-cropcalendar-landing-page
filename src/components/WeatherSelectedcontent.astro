@@ -1,0 +1,249 @@
+<div class="container" x-data="{ weatherOption: $store.weatherOption }">
+    <div class="frame">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 760 501"
+            fill="none"
+        >
+            <path
+                d="M0.5 0.5H685.178L759.5 88.798V500.5H0.5V0.5Z"
+                stroke="#B7B7B7"></path>
+        </svg>
+    </div>
+
+    <div
+        class="child"
+        x-show="$store.weatherOption === 'div1'"
+        x-cloak
+        x-transition:enter.duration.500ms.opacity
+    >
+        <div class="img_container">
+            <img src="src/assets/images/weather.gif" alt="" />
+        </div>
+        <div class="content">
+            <h4>Why These?</h4>
+            <a href="">
+                <p>
+                    Temperature, humidity, solar radiation, and precipitation
+                    are crucial for crop growth. They affect metabolic
+                    processes, hydration, photosynthesis, and water supply.
+                    Monitoring these factors helps optimize growing conditions
+                    for better crop outcomes.<span style="color: aqua;"
+                        >Learn more</span
+                    >
+                </p>
+            </a>
+        </div>
+    </div>
+    <div
+        class="child"
+        x-show="$store.weatherOption === 'div2'"
+        x-cloak
+        x-transition:enter.duration.500ms.opacity
+    >
+        <div class="img_container">
+            <img src="src/assets/images/tempweather.jpg" alt="" />
+        </div>
+        <div class="content">
+            <h4>Temperature</h4>
+            <a href="">
+                <p>
+                    Temperature regulates plant metabolism and growth rates.
+                    Optimal levels support healthy development, while extremes
+                    stress plants and reduce yields.<span style="color: aqua;"
+                        >Learn more</span
+                    >
+                </p>
+            </a>
+        </div>
+    </div>
+    <div
+        class="child"
+        x-show="$store.weatherOption === 'div3'"
+        x-cloak
+        x-transition:enter.duration.500ms.opacity
+    >
+        <div class="img_container">
+            <img src="src/assets/images/humidity.jpg" alt="" />
+        </div>
+        <div class="content">
+            <h4>Humidity</h4>
+            <a href="">
+                <p>
+                    Humidity affects transpiration rates and plant hydration.
+                    Proper levels are crucial for nutrient transport and
+                    metabolic processes, but extremes can lead to disease and
+                    moisture loss.<span style="color: aqua;">Learn more</span>
+                </p></a
+            >
+        </div>
+    </div>
+    <div
+        class="child"
+        x-show="$store.weatherOption === 'div4'"
+        x-cloak
+        x-transition:enter.duration.500ms.opacity
+    >
+        <div class="img_container">
+            <img src="src/assets/images/solarrad.png" alt="" />
+        </div>
+        <div class="content" style="color: rgb(255, 255, 255);">
+            <h4>Solar Radiation</h4>
+            <a href="">
+                <p>
+                    Solar energy fuels photosynthesis, promoting growth and
+                    yield. Adequate sunlight is essential, while insufficient
+                    light can hinder plant development and reduce productivity.<span
+                        style="color: aqua;">Learn more</span
+                    >
+                </p>
+            </a>
+        </div>
+    </div>
+    <div
+        class="child"
+        x-show="$store.weatherOption === 'div5'"
+        x-cloak
+        x-transition:enter.duration.500ms.opacity
+    >
+        <div class="img_container">
+            <img src="src/assets/images/precipitation.gif" alt="" />
+        </div>
+        <div class="content" style="color: rgb(255, 255, 255);">
+            <h4>Precipitation</h4>
+            <a href="">
+                <p>
+                    Water from rainfall or irrigation is vital for plant growth.
+                    Adequate moisture is necessary for germination and
+                    hydration, but excess or deficiency can lead to stress and
+                    yield losses. <span style="color: aqua;">Learn more</span>
+                </p>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- <style lang="scss">
+    .container {
+        display: flex;
+        width: 600px;
+
+        justify-content: center;
+        height: 500px;
+    }
+    .frame {
+        width: 77%;
+        z-index: 2;
+        svg {
+            width: 100%;
+            padding: 5.5% 0 0 0;
+            overflow: visible;
+        }
+    }
+    .child {
+        position: absolute;
+        width: 480px;
+        display: grid;
+        grid-row-gap: 2.25rem;
+        img {
+            width: 100%;
+        }
+        .content {
+            display: grid;
+            grid-row-gap: 1rem;
+            color: #fff;
+        }
+        p {
+            font-size: 0.85rem;
+            font-style: normal;
+            font-weight: 500;
+        }
+    }
+    [x-cloak] {
+        display: none !important;
+    }
+
+   
+    .img_container {
+        width: 100%;
+        max-height: 320px;
+        overflow: hidden;
+        height: auto
+    }
+    img {
+        padding: 7% 0 0 0;
+        height: 100%;
+        width: auto;
+
+        display: block;
+    }
+    a {
+        z-index: 3;
+        text-decoration: none;
+        color: #fff;
+    }
+</style> -->
+<style lang="scss">
+    .container {
+        display: flex;
+        margin: 0 2rem 0 2rem;
+
+        justify-content: center;
+        position: relative;
+    }
+    .frame {
+        width: 96%;
+        z-index: 2;
+        position: absolute;
+        svg {
+            width: 100%;
+            padding: 5.5% 0 0 0;
+            overflow: visible;
+        }
+    }
+    .child {
+        max-width: 480px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        img {
+            width: 100%;
+        }
+        .content {
+            display: grid;
+            grid-row-gap: 1rem;
+            color: #fff;
+        }
+
+        p {
+            font-size: 0.85rem;
+            font-style: normal;
+            font-weight: 500;
+        }
+    }
+    [x-cloak] {
+        display: none !important;
+    }
+
+    .img_container {
+        width: 100%;
+        max-height: 320px;
+        overflow: hidden;
+        height: auto;
+    }
+    img {
+        padding: 7% 0 0 0;
+        height: 100%;
+        width: auto;
+
+        display: block;
+    }
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+    @media screen and (max-width: 700px) {
+        .frame {
+            display: none;
+        }
+    }
+</style>

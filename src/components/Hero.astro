@@ -1,11 +1,7 @@
 <div class="layout-1">
     <div id="tsparticles-custom"></div>
-
     <div class="layout-container">
         <script type="text/javascript">
-            // All options can be found here: https://particles.js.org/docs/interfaces/Options_Interfaces_IOptions.IOptions.html
-            // The slim version doesn't have the following plugins:
-            // Absorbers, Emitters, PolygonMask, Interactivity Trail
             tsParticles.load("tsparticles-custom", {
                 fullScreen: {
                     enable: false,
@@ -163,10 +159,11 @@
         }
     }
     h1 {
-        font-size: clamp(2.25rem, 2vw + 1rem, 3.875rem);
-        font-weight: 600;
+        font-size: clamp(2.25rem, 2vw + 1.7rem, 3.875rem);
+        font-weight: 500;
         line-height: 160%;
         text-shadow: 0px 3px 10.8px rgba(0, 0, 0, 0.25);
+        font-family: "Share Tech";
     }
     .hero-section {
         display: grid;
@@ -175,7 +172,7 @@
 
     .hero-img {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
         svg {
             width: clamp(300px, 80%, 500px);
@@ -241,7 +238,10 @@
             font-weight: 700;
         }
     }
-
+    .explore-button span,
+    .sysdocs span{
+        font-family: "Share Tech";
+    }
     #tsparticles-custom {
         position: absolute;
         top: 0;

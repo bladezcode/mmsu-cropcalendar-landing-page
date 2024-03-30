@@ -1,9 +1,9 @@
 ---
-import Navbar from "../components/Navbar.astro";
+import HeaderContent from "../components/HeaderContent.astro";
 import Footer from "../components/Footer.astro";
 import "../components/GlobalStyles.astro";
+import Navbar from "../components/Navbar.astro";
 ---
-
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -19,27 +19,15 @@ import "../components/GlobalStyles.astro";
             href="https://fonts.googleapis.com/css2?family=Share+Tech&family=Share+Tech+Mono&display=swap"
             rel="stylesheet"
         />
-        <script
-            src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.0.6/tsparticles.slim.bundle.min.js"
-
-            is:inline></script>
-
-        <script>
-            import Alpine from "alpinejs";
-
-            Alpine.store("selectedOption", "div1");
-            Alpine.store("weatherOption", "div1");
-            Alpine.start();
-        </script>
-
-        <title>MMSU Auto Crop Calendar</title>
+       
+        <title>Nitrogen Phosphorus Potassium</title>
     </head>
 
     <body>
         <Navbar />
+        <HeaderContent />
         <!-- slot is index page -->
         <slot />
         <Footer />
     </body>
-    
 </html>

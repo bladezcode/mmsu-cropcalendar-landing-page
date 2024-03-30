@@ -1,0 +1,221 @@
+<div class="container" x-data="{ selectedOption: $store.selectedOption }">
+    <div class="frame">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 760 501"
+            fill="none"
+        >
+            <path
+                d="M0.5 0.5H685.178L759.5 88.798V500.5H0.5V0.5Z"
+                stroke="#B7B7B7"></path>
+        </svg>
+    </div>
+
+    <div
+        class="child"
+        x-show="$store.selectedOption === 'div1'"
+        x-cloak
+        x-transition:enter.duration.500ms.opacity
+    >
+        <div class="img_container">
+            <img src="src/assets/images/field.png" alt="" />
+        </div>
+        <div class="content">
+            <h4>Why These?</h4>
+            <a href="/npk">
+                <p>
+                    NPK soil nutrients, air temperature, and soil moisture are
+                    fundamental factors that significantly impact crop
+                    productivity. By closely monitoring and managing these
+                    factors, farmers can optimize growing conditions, minimize
+                    stressors, and ultimately maximize yields to ensure food
+                    security and agricultural sustainability. <span
+                        class="green">Click here to learn more</span
+                    >
+                </p>
+            </a>
+        </div>
+    </div>
+
+    <div
+        class="child"
+        x-show="$store.selectedOption === 'div2'"
+        x-cloak
+        x-transition:enter.duration.500ms.opacity
+    >
+        <div class="img_container">
+            <img src="src/assets/images/nitrogen.jpg" alt="" />
+        </div>
+        <div class="content">
+            <h4>Nitrogen</h4>
+            <a href="/npk">
+                <p>
+                    Nitrogen is crucial for rice and corn productivity,
+                    promoting growth and yield. Insufficient levels lead to
+                    stunted growth and lower quality grains. Monitoring nitrogen
+                    is vital for maximizing yields.
+                    <span class="green"> Click here to learn more.</span>
+                </p>
+            </a>
+        </div>
+    </div>
+    <div
+        class="child"
+        x-show="$store.selectedOption === 'div3'"
+        x-cloak
+        x-transition:enter.duration.500ms.opacity
+    >
+        <div class="img_container">
+            <img src="src/assets/images/phosphorus.jpg" alt="" />
+        </div>
+        <div class="content">
+            <h4>Phosphorus</h4>
+            <a href="/npk">
+                <p>
+                    Phosphorus is critical for root development and nutrient
+                    uptake in rice and corn. Balanced levels enhance vigor and
+                    productivity. Monitoring phosphorus ensures optimal yields.
+                    <span class="green"> Click here to learn more.</span>
+                </p>
+            </a>
+        </div>
+    </div>
+    <div
+        class="child"
+        x-show="$store.selectedOption === 'div4'"
+        x-cloak
+        x-transition:enter.duration.500ms.opacity
+    >
+        <div class="img_container">
+            <img src="src/assets/images/potassium.gif" alt="" />
+        </div>
+        <div class="content" style="color: rgb(255, 255, 255);">
+            <h4>Potassium</h4>
+            <a href="/npk">
+                <p>
+                    Potassium regulates growth and stress tolerance in rice and
+                    corn. Adequate levels improve yield and quality. Monitoring
+                    potassium is essential for sustainable agriculture. <span
+                        class="green"
+                    >
+                        Click here to learn more.</span
+                    >
+                </p>
+            </a>
+        </div>
+    </div>
+    <div
+        class="child"
+        x-show="$store.selectedOption === 'div5'"
+        x-cloak
+        x-transition:enter.duration.500ms.opacity
+    >
+        <div class="img_container">
+            <img src="src/assets/images/temp.jpg" alt="" />
+        </div>
+        <div class="content" style="color: rgb(255, 255, 255);">
+            <h4>Air and Soil Temperature</h4><a href="/npk">
+                <p>
+                    These temperatures affect plant growth, development, and
+                    productivity. Optimal levels promote germination, nutrient
+                    availability, and metabolic rates. Monitoring them helps
+                    time planting and manage stress for better crop performance. <span
+                        class="green">Click here to learn more.</span
+                    >
+                </p>
+            </a>
+        </div>
+    </div>
+    <div
+        class="child"
+        x-show="$store.selectedOption === 'div6'"
+        x-cloak
+        x-transition:enter.duration.500ms.opacity
+    >
+        <div class="img_container">
+            <img src="src/assets/images/soilmoisture.png" alt="" />
+        </div>
+        <div class="content" style="color: rgb(255, 255, 255);">
+            <h4>Soil Moisture</h4>
+            <a href="">
+                <p>
+                    Soil moisture is crucial for seed germination and plant
+                    hydration. Adequate moisture levels ensure proper root
+                    development and nutrient uptake. Monitoring soil moisture
+                    helps prevent waterlogging or drought stress, ensuring
+                    optimal growth and productivity.<span class="green">
+                        Click here to learn more.</span
+                    >
+                </p>
+            </a>
+        </div>
+    </div>
+</div>
+<style lang="scss">
+    .container {
+        display: flex;
+        margin: 0 2rem 0 2rem;
+        justify-content: center;
+        position: relative;
+    }
+    .frame {
+        width: 96%;
+        z-index: 2;
+        position: absolute;
+        svg {
+            width: 100%;
+            padding: 5.5% 0 0 0;
+            overflow: visible;
+        }
+    }
+    .child {
+        max-width: 480px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        img {
+            width: 100%;
+        }
+        .content {
+            display: grid;
+            grid-row-gap: 1rem;
+            color: #fff;
+        }
+
+        p {
+            font-size: 0.85rem;
+            font-style: normal;
+            font-weight: 500;
+            text-align: justify;
+        }
+    }
+    [x-cloak] {
+        display: none !important;
+    }
+
+    .img_container {
+        width: 100%;
+        max-height: 320px;
+        overflow: hidden;
+        height: auto;
+    }
+    img {
+        padding: 7% 0 0 0;
+        height: 100%;
+        width: auto;
+
+        display: block;
+    }
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+    @media screen and (max-width: 700px) {
+        .frame {
+            display: none;
+        }
+    }
+    .green {
+        color: #51e572;
+    }
+</style>

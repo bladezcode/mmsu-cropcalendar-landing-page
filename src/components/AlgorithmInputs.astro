@@ -1,0 +1,95 @@
+---
+import { Image } from "astro:assets";
+import Selector from "./RealtimeSelector.astro";
+import Selectedcontent from "./RealtimeSelectedcontent.astro";
+import WeatherSelector from "./WeatherSelector.astro";
+import WeatherSelectedcontent from "./WeatherSelectedcontent.astro";
+---
+
+<div class="background">
+    <div class="realtime_section">
+        <div class="title" style="text-align: center;">
+            <h2 style="color: white;">
+                <span style="color: #35D374;">Field Constraints</span>
+                <br />and <span style="color: #FAC12F;"
+                    >Resource <br /> monitoring</span
+                >
+            </h2>
+        </div>
+        <div class="realtime_inputs_page">
+            <Selector />
+            <Selectedcontent />
+            <!-- <div class="info_modal">window</div> -->
+        </div>
+    </div>
+    <div class="weather_section">
+        <div class="title" style="text-align: center;">
+            <h2>
+                <span style="color: #30E2ED;">Climatic Data</span>
+                <br /> from Local
+                <span style="color: #30E2ED;">PAG-ASA</span>
+                <br /> Agrometeorological Station
+            </h2>
+        </div>
+        <div class="weather_inputs_page">
+            <WeatherSelectedcontent />
+            <WeatherSelector />
+        </div>
+    </div>
+</div>
+<style lang="scss">
+    .background {
+        background: linear-gradient(180deg, #171717 0%, #2e2e2e 100%);
+        min-height: 200vh;
+        padding: 4.75rem 0 4.75rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 6rem;
+    }
+    .realtime_inputs_page,
+    .weather_inputs_page {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .realtime_inputs_page {
+        gap: 3rem;
+    }
+    .title_gaps {
+        margin-top: 14rem;
+    }
+    .realtime_section,
+    .weather_section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.5rem;
+    }
+    .title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: #fff;
+        padding: 0 3rem;
+
+        h2,
+        span {
+            font-size: clamp(2rem, 2vw + 1rem, 3.5rem);
+            text-align: left;
+            font-family: "Share Tech Mono";
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        .realtime_inputs_page,
+         {
+            display: flex;
+            flex-direction: column;
+        }
+        .weather_inputs_page {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+</style>

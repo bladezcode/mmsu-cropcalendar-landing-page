@@ -1,0 +1,118 @@
+---
+import Utilitypagecontent from "./Utilitypagebox.astro";
+---
+
+<div class="container">
+    <div class="topsection">
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1865"
+            height="75"
+            viewBox="0 0 1865 75"
+            fill="none"
+        >
+            <path d="M1971 74H1867H1210.18L1069.71 1H-4H-110" stroke="#B7B7B7"
+            ></path>
+        </svg>
+    </div>
+    <div class="page">
+        <div id="app"></div>
+        <div class="page_title">
+            <h1>Web App <br /> Utility <br />and <br /> Features</h1>
+        </div>
+        <div class="boxes">
+            <Utilitypagecontent
+                title="CROP CALENDAR PREDICTION "
+                image="src/assets/images/feature1.png"
+                content="Our main objective is to develop a crop calendar prediction system using two algorithms - machine learning and hybrid algorithm(genetic algorithm and simulated annealing. This functions as a decision support tool to aide farmers in crop scheduling and resource utilization"
+                link="https://www.google.com"
+            />
+            <Utilitypagecontent
+                title="GRAPH VISUALIZATION "
+                image="src/assets/images/feature2.png"
+                content="Graph Visualizations simplify the process of identifying trends and how soil and certain crops respond to a specific combinations of fertilizer applications particularly Nitrogen, Phosphorus and Potassium application as well as detecting soil conditions"
+                link="https://www.google.com"
+            />
+            <Utilitypagecontent
+                title="REALTIME FIELD INSIGHTS"
+                image="src/assets/images/feature3.png"
+                content="Sensor nodes operate at a given interval from the app, this insights significantly help in decision making. Along with the calendar it simplifies and offer suggestions in realtime"
+                link="https://www.google.com"
+            />
+            <Utilitypagecontent
+                title="CUSTOM PREDICTIONS PARAMETER BASED"
+                image="src/assets/images/feature4.png"
+                content="Along with rice and corn the user can input custom parameters based on their domain knowledge to identify the optimal periods for crops.This helps in predicting the best time frame for any particular crops planted locally. "
+                link="https://www.google.com"
+            />
+        </div>
+    </div>
+</div>
+
+<style lang="scss">
+    .container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #eeeeee;
+        gap: 5.5rem;
+        padding: 0 0 4.75rem 0;
+        .topsection {
+            width: 100%;
+            svg {
+                width: 100%;
+            }
+        }
+    }
+    .page {
+        gap: 5rem;
+        h1 {
+            font-family: "Share Tech Mono";
+            font-weight: 400;
+            font-size: clamp(1rem, 2vw + 1.8rem, 5rem);
+            color: #292929;
+            position: relative;
+            bottom: 150px;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .boxes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2.25rem;
+        }
+    }
+    @media screen and (max-width: 1280px) {
+        .container .page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            h1 {
+                bottom: 100px;
+            }
+        }
+    }
+    @media screen and (max-width: 800px) {
+        .container .page {
+            display: flex;
+            align-items: flex-start;
+            .page_title h1 {
+                margin-left: 1rem
+            }
+        }
+        .container {
+            gap: 3rem;
+        }
+        .container .page .boxes {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .container .page_title h1 {
+            font-size: 3rem;
+            bottom: 30px;
+        }
+    }
+</style>

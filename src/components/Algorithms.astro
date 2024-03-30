@@ -86,12 +86,17 @@
                     of the algorithm's recommendations.
                 </p>
             </div>
-            <div class="button-wrapper"><button>LEARN MORE ->> </button></div>
+            <div class="button-wrapper"><button>LEARN MORE ->></button></div>
         </div>
     </div>
 </div>
 
 <style lang="scss">
+    h2 {
+        font-size: clamp(0.875rem, 2vw + 0.875rem, 2.5rem);
+        font-weight: 600;
+        margin-bottom: 3%;
+    }
     .layout-main {
         min-height: 100vh;
         display: flex;
@@ -111,7 +116,6 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 3rem;
             padding: 0 2rem;
-            
         }
     }
     .machine,
@@ -122,9 +126,12 @@
         padding: 2rem;
         max-width: 400px;
         gap: 1rem;
+        p {
+            text-align: justify;
+        }
         .content {
             display: grid;
-            row-gap: .5rem;
+            row-gap: 0.5rem;
         }
         svg {
             width: max(200px, 100%);
@@ -145,5 +152,24 @@
             grid-auto-flow: row;
             grid-template-columns: clamp(200px, 100%, 400px);
         }
+    }
+
+    .button-wrapper {
+        display: flex;
+        justify-content: flex-end;
+    }
+    button {
+        border: none;
+        border-radius: 0.375rem;
+        display: flex;
+        padding: 0.5rem 1.125rem;
+    }
+
+    .hybrid button {
+        background: #333733;
+        color: #51e59e;
+    }
+    .machine button {
+        background: #ececec;
     }
 </style>

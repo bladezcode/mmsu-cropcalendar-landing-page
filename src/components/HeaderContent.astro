@@ -1,0 +1,53 @@
+<header>
+    <div class="container">
+        <a href="/">
+            <div class="backbutton">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"
+                    ><path
+                        d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z"
+                    ></path></svg
+                >
+            </div>
+            <span>BACK TO HOME</span>
+        </a>
+        <span class="realtime">Realtime Algorithm Inputs</span>
+    </div>
+</header>
+<style lang="scss">
+    .container {
+        background-color: #51e572;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        a{
+            gap: 1rem;
+        }
+        a,
+        .backbutton {
+            display: inline-flex;
+            flex-direction: flex-start;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+        }
+        .realtime {
+            display: flex;
+            align-items: center
+        }
+    }
+    span {
+        font-weight: 500;
+        font-family: "Share Tech Mono";
+    }
+    @media screen and (max-width: 600px) {
+        a span {
+            display: none;
+        }
+        
+    }
+</style>

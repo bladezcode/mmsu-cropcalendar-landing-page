@@ -1,0 +1,304 @@
+<div class="selector_component" x-data="{ activeOption: '0' }">
+    <div class="div-line">
+        <svg
+            class="svg-line"
+            xmlns="http://www.w3.org/2000/svg"
+            width="4"
+            height="637"
+            viewBox="0 0 4 637"
+            fill="none"
+        >
+            <path d="M2 0L1.99997 637" stroke="#E4E4E4" stroke-width="2"></path>
+        </svg>
+    </div>
+    <div class="indicator">
+        <svg
+            :style="{ top: activeOption + '%' }"
+            xmlns="http://www.w3.org/2000/svg"
+            width="53"
+            height="34"
+            viewBox="0 0 53 34"
+            fill="none"
+        >
+            <circle
+                cx="17"
+                cy="17"
+                r="15.5"
+                fill="#1E1E1E"
+                stroke="white"
+                stroke-width="3"></circle>
+            <circle cx="17" cy="17" r="6" fill="white"></circle>
+        </svg>
+    </div>
+    <div class="feature_group">
+        <div class="item_bullet">
+            <svg
+                class="circle"
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+            >
+                <circle cx="6" cy="6" r="6" fill="#E4E4E4"></circle>
+            </svg>
+            <svg
+                x-show="activeOption === '0'"
+                x-transition.scale.0.duration.600ms.origin.top.left
+                class="item_line"
+                xmlns="http://www.w3.org/2000/svg"
+                width="38"
+                height="3"
+                viewBox="0 0 78 3"
+                fill="none"
+            >
+                <path d="M0 1.5H78" stroke="#E4E4E4" stroke-width="3"></path>
+            </svg>
+            <button
+                x-data
+                @click="$store.selectedOption = 'div1'; activeOption = '0'"
+                class="item"
+                >01<span> <i>Why these?</i> </span>
+            </button>
+        </div>
+        <div class="item_bullet">
+            <svg
+                class="circle"
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+            >
+                <circle cx="6" cy="6" r="6" fill="#E4E4E4"></circle>
+            </svg>
+            <svg
+                x-show="activeOption === '18.5'"
+                x-transition.scale.0.duration.600ms.origin.top.left
+                class="item_line"
+                xmlns="http://www.w3.org/2000/svg"
+                width="38"
+                height="3"
+                viewBox="0 0 78 3"
+                fill="none"
+            >
+                <path d="M0 1.5H78" stroke="#E4E4E4" stroke-width="3"></path>
+            </svg>
+            <button
+                x-data
+                @click="$store.selectedOption = 'div2'; activeOption = '18.5'"
+                class="item">02<span class="green"> Nitrogen</span></button
+            >
+        </div>
+        <div class="item_bullet">
+            <svg
+                class="circle"
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+            >
+                <circle cx="6" cy="6" r="6" fill="#E4E4E4"></circle>
+            </svg>
+            <svg
+                x-show="activeOption === '37'"
+                x-transition.scale.0.duration.600ms.origin.top.left
+                class="item_line"
+                xmlns="http://www.w3.org/2000/svg"
+                width="38"
+                height="3"
+                viewBox="0 0 78 3"
+                fill="none"
+            >
+                <path d="M0 1.5H78" stroke="#E4E4E4" stroke-width="3"></path>
+            </svg>
+            <button
+                x-data
+                @click="$store.selectedOption = 'div3'; activeOption = '37'"
+                class="item">03<span class="green"> Phosphorus</span></button
+            >
+        </div>
+        <div class="item_bullet">
+            <svg
+                class="circle"
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+            >
+                <circle cx="6" cy="6" r="6" fill="#E4E4E4"></circle>
+            </svg>
+            <svg
+                x-show="activeOption === '55.5'"
+                x-transition.scale.0.duration.600ms.origin.top.left
+                class="item_line"
+                xmlns="http://www.w3.org/2000/svg"
+                width="38"
+                height="3"
+                viewBox="0 0 78 3"
+                fill="none"
+            >
+                <path d="M0 1.5H78" stroke="#E4E4E4" stroke-width="3"></path>
+            </svg>
+            <button
+                x-data
+                @click="$store.selectedOption = 'div4'; activeOption = '55.5'"
+                class="item">04<span class="green"> Potassium</span></button
+            >
+        </div>
+        <div class="item_bullet">
+            <svg
+                class="circle"
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+            >
+                <circle cx="6" cy="6" r="6" fill="#E4E4E4"></circle>
+            </svg>
+            <svg
+                x-show="activeOption === '74'"
+                x-transition.scale.0.duration.600ms.origin.top.left
+                class="item_line"
+                xmlns="http://www.w3.org/2000/svg"
+                width="38"
+                height="3"
+                viewBox="0 0 78 3"
+                fill="none"
+            >
+                <path d="M0 1.5H78" stroke="#E4E4E4" stroke-width="3"></path>
+            </svg>
+            <button
+                x-data
+                @click="$store.selectedOption = 'div5'; activeOption = '74'"
+                class="item">05<span class="yellow"> Temperature</span></button
+            >
+        </div>
+        <div class="item_bullet">
+            <svg
+                class="circle"
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+            >
+                <circle cx="6" cy="6" r="6" fill="#E4E4E4"></circle>
+            </svg>
+            <svg
+                x-show="activeOption === '92.5'"
+                x-transition.scale.0.duration.600ms.origin.top.left
+                class="item_line"
+                xmlns="http://www.w3.org/2000/svg"
+                width="38"
+                height="3"
+                viewBox="0 0 78 3"
+                fill="none"
+            >
+                <path d="M0 1.5H78" stroke="#E4E4E4" stroke-width="3"></path>
+            </svg>
+            <button
+                x-data
+                @click="$store.selectedOption = 'div6'; activeOption = '92.5'"
+                class="item"
+                >06<span class="yellow"> Soil Moisture</span>
+            </button>
+        </div>
+    </div>
+</div>
+<style lang="scss">
+    .selector_component {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 500px; // resizer
+
+        .feature_group {
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-around;
+            color: #fff;
+            height: 100%;
+        }
+
+        .div-line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            left: 61px;
+            height: 100%;
+
+            .svg-line {
+                position: relative;
+                height: 82%;
+            }
+        }
+    }
+
+    .indicator {
+        height: 100%;
+        position: relative;
+        left: 44px;
+        padding: 25px 0 25px 0;
+        box-sizing: border-box;
+        svg {
+            z-index: 1;
+            position: relative;
+            width: 85%;
+            transition: cubic-bezier(0.22, 0.61, 0.36, 1) 0.3s;
+        }
+    }
+
+    .item_bullet {
+        button {
+            all: unset;
+            cursor: pointer;
+            color: #fff;
+            font-size: clamp(1.125rem, 2vw + 0.5rem, 1.725rem);
+            font-weight: 500;
+            font-family: "Share Tech Mono";
+        }
+        display: flex;
+        gap: 3.25rem;
+        align-items: center;
+        .item_line {
+            position: absolute;
+        }
+    }
+
+    .item {
+        padding: 1rem;
+
+        .green {
+            color: #51e572;
+        }
+        .yellow {
+            color: #fac12f;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .selector_component .feature_group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 2rem;
+            svg {
+                display: none;
+            }
+        }
+        .indicator {
+            display: none;
+        }
+        .div-line svg {
+            display: none;
+        }
+        .selector_component {
+            height: 100%;
+        }
+    }
+</style>
