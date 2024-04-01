@@ -1,6 +1,5 @@
 ---
 const { content, title, image, link } = Astro.props;
-
 ---
 
 <div class="container">
@@ -32,7 +31,6 @@ const { content, title, image, link } = Astro.props;
 <style lang="scss">
     .container {
         max-width: 489px;
-        
 
         position: relative;
         display: flex;
@@ -65,18 +63,17 @@ const { content, title, image, link } = Astro.props;
             }
             img {
                 grid-area: 2 / 1 / 4 / 2;
-                
 
                 width: 100%;
                 height: auto;
             }
             p {
                 grid-area: 2 / 2 / 3 / 3;
-                font-size: clamp(.5rem, 1vw + .5rem, 0.875rem);
+                font-size: clamp(0.5rem, 1vw + 0.5rem, 0.875rem);
                 text-align: justify;
             }
             a {
-                font-size: clamp(.5rem, 1vw + .5rem, 0.875rem);
+                font-size: clamp(0.5rem, 1vw + 0.5rem, 0.875rem);
                 justify-self: end;
                 grid-area: 3 / 2 / 4 / 3;
                 text-decoration: none;
@@ -86,7 +83,7 @@ const { content, title, image, link } = Astro.props;
         }
     }
     @media screen and (max-width: 600px) {
-        .container{
+        .container {
             margin: 0 1rem;
         }
     }
