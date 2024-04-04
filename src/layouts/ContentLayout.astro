@@ -3,6 +3,7 @@ import HeaderContent from "../components/HeaderContent.astro";
 import Footer from "../components/Footer.astro";
 import "../components/GlobalStyles.astro";
 import Navbar from "../components/Navbar.astro";
+const { title, subtitle, image, imageposition, content } = Astro.props;
 ---
 <html lang="en">
     <head>
@@ -20,14 +21,94 @@ import Navbar from "../components/Navbar.astro";
             rel="stylesheet"
         />
        
-        <title>Nitrogen Phosphorus Potassium</title>
+        <title>{ title }</title>
+        
     </head>
 
+    <style lang="scss">
+        body {
+            background-color: #f0f0f0;
+        }
+        .container {
+            min-height: 100vh;
+        }
+        
+        img {
+            z-index: -1 ;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            
+        } 
+        .image_cover {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.267);
+            .titleheader {
+                position: absolute;
+                padding: 0 0 3rem 6rem;
+                color: #fff;
+                
+            }    
+            h1::first-letter {
+                color: #51E572;
+            }
+            h1 {
+               
+                font-size: 4rem;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                font-family: "Share Tech Mono";
+            }
+            h4 {
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                font-family: "Share Tech";
+            }
+        }
+        .content {
+            padding: 2rem 6rem;
+            p {
+                line-height: 1.6;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .image_cover .titleheader {
+                padding: 0 0 2rem 1rem;
+            }
+            .content {   
+                padding: 1rem
+            }
+        }
+    </style>
     <body>
         <Navbar />
-        <HeaderContent />
-        <!-- slot is index page -->
-        <slot />
+        <HeaderContent title={ title }/>
+        <slot>
+
+         <div class="container">
+
+        <div class="image_cover">
+            <img src={ image } alt="" style={ imageposition }>
+            
+            <div class="titleheader">
+             <h1>
+              { title }
+             </h1>
+             <h4>
+                { subtitle }
+             </h4>
+            </div> 
+             
+        </div>
+        <div class="content">
+           
+            <p>
+              { content }
+            </p>
+        </div>
+        </div>   
+        </slot>
+        
         <Footer />
     </body>
 </html>

@@ -127,7 +127,11 @@
             </div>
         </div>
         <div class="button-wrapper">
-            <button class="explore-button"> <span>Explore App</span></button>
+            <a href="/app"
+                ><button class="explore-button">
+                    <span>Explore App</span></button
+                ></a
+            >
             <button class="sysdocs"><span>System Docs</span></button>
         </div>
     </div>
@@ -208,7 +212,6 @@
         span {
             color: #fff;
             font-size: 1.5rem;
-            font-weight: 700;
         }
     }
     button:hover {
@@ -235,12 +238,11 @@
         span {
             color: #4e4e4e;
             font-size: 1.5rem;
-            font-weight: 700;
         }
     }
     .explore-button span,
     .sysdocs span {
-        font-family: "Share Tech";
+        font-weight: 600;
     }
     #tsparticles-custom {
         position: absolute;
@@ -289,6 +291,13 @@
             button span {
                 font-size: 1.5rem;
             }
+        }
+        a {
+            width: 100%;
+            text-decoration: none;
+        }
+        .explore-button {
+            width: 100%;
         }
     }
 </style>
