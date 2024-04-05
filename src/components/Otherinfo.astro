@@ -1,0 +1,49 @@
+---
+import Cards from "./Cards.astro";
+---
+
+<div class="container">
+    <div class="black_cards">
+        <Cards
+            cardnum="01"
+            title="Hybrid Algorithm"
+            action="learn more"
+            image="/images/haicon.svg"
+        />
+        <Cards
+            cardnum="02"
+            title="Machine Learning "
+            action="learn more"
+            image="/images/machinelearning.svg"
+        />
+        <Cards
+            cardnum="03"
+            title="Hardware Design"
+            action="learn more"
+            image="/images/hardware.svg"
+        />
+    </div>
+</div>
+<style lang="scss">
+    .container {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+    .black_cards {
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-gap: 1rem;
+        
+        
+    }
+    @media screen and (max-width: 800px) {
+       .container .black_cards {
+           grid-template-columns: repeat(1, 1fr);
+       } 
+    }
+</style>
