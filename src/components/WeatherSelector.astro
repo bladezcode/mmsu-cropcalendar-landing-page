@@ -43,6 +43,25 @@
                 <circle cx="6" cy="6" r="6" fill="#E4E4E4"></circle>
             </svg>
             <svg
+                class="arrow"
+                x-show="activeOption === '0'"
+                x-transition:enter.opacity.0.duration.600ms.origin.left
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                    d="m9 5 7 7-7 7"></path>
+            </svg>
+
+            <svg
                 x-show="activeOption === '0'"
                 x-transition.scale.0.duration.600ms.origin.top.left
                 class="item_line"
@@ -71,6 +90,24 @@
                 fill="none"
             >
                 <circle cx="6" cy="6" r="6" fill="#E4E4E4"></circle>
+            </svg>
+            <svg
+                class="arrow"
+                x-show="activeOption === '23'"
+                x-transition:enter.opacity.0.duration.600ms.origin.left
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                    d="m9 5 7 7-7 7"></path>
             </svg>
             <svg
                 x-show="activeOption === '23'"
@@ -102,6 +139,24 @@
                 <circle cx="6" cy="6" r="6" fill="#E4E4E4"></circle>
             </svg>
             <svg
+                class="arrow"
+                x-show="activeOption === '46.5'"
+                x-transition:enter.opacity.0.duration.600ms.origin.left
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                    d="m9 5 7 7-7 7"></path>
+            </svg>
+            <svg
                 x-show="activeOption === '46.5'"
                 x-transition.scale.0.duration.600ms.origin.top.left
                 class="item_line"
@@ -129,6 +184,24 @@
                 fill="none"
             >
                 <circle cx="6" cy="6" r="6" fill="#E4E4E4"></circle>
+            </svg>
+            <svg
+                class="arrow"
+                x-show="activeOption === '69'"
+                x-transition:enter.opacity.0.duration.600ms.origin.left
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                    d="m9 5 7 7-7 7"></path>
             </svg>
             <svg
                 x-show="activeOption === '69'"
@@ -159,6 +232,24 @@
                 fill="none"
             >
                 <circle cx="6" cy="6" r="6" fill="#E4E4E4"></circle>
+            </svg>
+            <svg
+                class="arrow"
+                x-show="activeOption === '92'"
+                x-transition:enter.opacity.0.duration.600ms.origin.left
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                    d="m9 5 7 7-7 7"></path>
             </svg>
             <svg
                 x-show="activeOption === '92'"
@@ -240,6 +331,9 @@
         .item_line {
             position: absolute;
         }
+        .arrow {
+            display: none;
+        }
     }
 
     .item {
@@ -261,9 +355,14 @@
             width: 100%;
             padding: 0 1.25rem;
             flex-shrink: 1;
-            
+            .item_bullet {
+                gap: .2rem;
+            }
             svg {
                 display: none;
+            }
+            .arrow {
+                display: block;
             }
         }
         .indicator {
