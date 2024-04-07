@@ -132,7 +132,9 @@
                     <span>Explore App</span></button
                 ></a
             >
-            <button class="sysdocs"><span>System Docs</span></button>
+            <a href="https://docs.google.com/document/d/1pK9j0opoE6Q1pyFtj7D-SGeagLI6br576WdbEQgN_Yc/edit?usp=sharing"
+                ><button class="sysdocs"><span>System Docs</span></button></a
+            >
         </div>
     </div>
 </div>
@@ -163,7 +165,7 @@
         }
     }
     h1 {
-        font-size: clamp(2.25rem, 2vw + 1.7rem, 3.875rem);
+        font-size: clamp(2.25rem, 2vw + 2rem, 4rem);
         font-weight: 500;
         line-height: 160%;
         text-shadow: 0px 3px 10.8px rgba(0, 0, 0, 0.25);
@@ -193,6 +195,9 @@
         margin-top: 2rem;
         display: flex;
         gap: 1rem;
+        a {
+            text-decoration: none;
+        }
     }
     .explore-button {
         border: none;
@@ -291,9 +296,11 @@
             button span {
                 font-size: 1.5rem;
             }
+            .sysdocs {
+                width: 100%;
+            }
         }
-        a {
-            width: 100%;
+        a {   
             text-decoration: none;
         }
         .explore-button {
