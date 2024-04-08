@@ -47,8 +47,10 @@ const { title, subtitle, image, imageposition, content, h1class, headercolor } =
             box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.322);
             .titleheader {
                 position: absolute;
-                padding: 0 0 3rem 6rem;
                 color: #fff;
+                display: flex;
+                justify-content:center;
+                width: 100%;
                 
             }    
             h1::first-letter {
@@ -69,20 +71,20 @@ const { title, subtitle, image, imageposition, content, h1class, headercolor } =
                 font-family: "Share Tech";
             }
         }
+      
+        .wrapper {
+            max-width: 90rem;
+            flex: 1;
+            padding: 2rem 1rem;
+        }
         .content {
-            padding: 2rem 6rem;
+            display: flex;
+            justify-content: center;
             p {
                 line-height: 1.6;
             }
         }
-        @media screen and (max-width: 600px) {
-            .image_cover .titleheader {
-                padding: 0 0 2rem 1rem;
-            }
-            .content {   
-                padding: 1rem
-            }
-        }
+        
     </style>
     <body>
         <Navbar />
@@ -95,20 +97,25 @@ const { title, subtitle, image, imageposition, content, h1class, headercolor } =
             <img src={ image } alt="" style={ imageposition }>
             
             <div class="titleheader">
-             <h1 class={ h1class }>
-              { title }
-             </h1>
-             <h4>
-                { subtitle }
-             </h4>
+                <div class="wrapper">
+                    <h1 class={ h1class }>
+                        { title }
+                    </h1>
+                    <h4>
+                        { subtitle }
+                    </h4>
+                </div>
+             
             </div> 
              
         </div>
         <div class="content">
-           
-            <p>
-              { content }
-            </p>
+           <div class="wrapper">
+                <p>
+                { content }
+                </p>
+           </div>
+            
         </div>
         </div>   
         </slot>
