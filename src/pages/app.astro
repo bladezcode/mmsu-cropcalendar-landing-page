@@ -2,8 +2,8 @@
 import Navbar from "../components/Navbar.astro";
 import "../components/GlobalStyles.astro";
 ---
+
 <html lang="en">
-    
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,33 +22,31 @@ import "../components/GlobalStyles.astro";
             src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.0.6/tsparticles.slim.bundle.min.js"
             is:inline></script>
 
-
         <title>MMSU Auto Crop Calendar</title>
         <link rel="icon" type="image/x-icon" href="/images/favicon.svg" />
     </head>
     <body>
         <Navbar />
         <div class="comingsoon">
-            <img src="/images/robot.svg" alt="">
-            UNDER DEVELOPMENT <br>COMING SOON!
+            <img src="/images/robot.svg" alt="" />
+            UNDER DEVELOPMENT <br />COMING SOON!
         </div>
-        
     </body>
     <style>
-            .comingsoon {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                min-height: 100vh;
-                font-family: "Share Tech Mono";
-                font-size: 2rem;
-                gap: 1rem;
-                text-align: center;
-                letter-spacing: .5rem;
-            }
-            img {
-                width: 50px;
-            }
-        </style>
+        .comingsoon {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            font-family: "Share Tech Mono";
+            font-size: 2rem;
+            gap: 1rem;
+            text-align: center;
+            letter-spacing: 0.5rem;
+        }
+        img {
+            width: 50px;
+        }
+    </style>
 </html>
