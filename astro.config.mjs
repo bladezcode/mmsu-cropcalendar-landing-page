@@ -5,6 +5,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://mmsu-cropcalendar-landing-page.vercel.app',
   integrations: [tunnel({
     // The URL to expose. Defaults to http://localhost:4321.
     url: 'http://localhost:4321',
