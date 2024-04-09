@@ -2,9 +2,10 @@
 import ContentLayout from "../layouts/ContentLayout.astro";
 ---
 
-<ContentLayout title="About Page">
-    <div class="about"><div class="wrapper"><h1>ABOUT</h1></div></div>
-
+<ContentLayout title="About Page" >
+    
+    <div class="about" slot="contentstyle"><div class="wrapper"><h1>ABOUT</h1></div></div>
+    
     <style lang="scss">
         .about {
             padding: 2%;
@@ -13,7 +14,7 @@ import ContentLayout from "../layouts/ContentLayout.astro";
             justify-content: center;
             .wrapper {
                 max-width: 90rem;
-                flex: 1
+                flex: 1;
             }
         }
     </style>
