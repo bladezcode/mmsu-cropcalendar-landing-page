@@ -14,7 +14,12 @@
                         },
                         onHover: {
                             enable: true,
-                            mode: "repulse",
+                            mode: "grab",
+                            parallax: {
+                                enable: true,
+                                force: 60,
+                                smooth: 10,
+                            },
                         },
                     },
                     modes: {
@@ -23,6 +28,14 @@
                         },
                         repulse: {
                             distance: 100,
+                        },
+                        grab: {
+                            distance: 300,
+                            links: {
+                                blink: false,
+                                consent: false,
+                                opacity: 1,
+                            },
                         },
                     },
                 },
@@ -48,17 +61,17 @@
                         },
                     },
                     opacity: {
-                        value: 0.2,
-                        random: false,
+                        value: 0.7,
+                        random: true,
                         anim: {
                             enable: false,
-                            speed: 1,
+                            speed: 0.8,
                             opacity_min: 0.3,
                             sync: false,
                         },
                     },
                     size: {
-                        value: 3,
+                        value: 5,
                         random: true,
                         anim: {
                             enable: false,
@@ -70,9 +83,9 @@
                     line_linked: {
                         enable: true,
                         distance: 150,
-                        color: "#1fb631",
+                        color: "#439A4D",
                         opacity: 0.65,
-                        width: 1,
+                        width: 0.8,
                     },
                     move: {
                         enable: true,
@@ -94,14 +107,20 @@
 
         <div class="hero-section">
             <div class="hero-title">
-                <p class="subheading">
-                    <span>A Thesis Research Study on</span>
-                    <br />Enhancing Precision Agriculture at MMSU i4.0:
-                </p>
                 <h1>
-                    A Comparative Analysis of <br> Machine Learning Algorithm <br>and
-                    Hybrid Algorithm For <br> Crop Calendar Prediction
+                    <!-- A Comparative Analysis of <br /> Machine Learning Algorithm <br
+                    />and Hybrid Algorithm For <br /> Crop Calendar Prediction -->
+                    Empowering MMSU Farmers: <br />
+                    <span>Smarter Decisions, Bountiful Harvest</span>
                 </h1>
+                <p class="subheading">
+                    <span
+                        >A Thesis Research Study on Enhancing Precision
+                        Agriculture at <br />MMSU i4.0: A Comparative Analysis
+                        of Machine Learning Algorithm <br />and Hybrid Algorithm
+                        For Crop Calendar Prediction</span
+                    >
+                </p>
             </div>
             <div class="hero-img">
                 <svg
@@ -132,7 +151,8 @@
                     <span>Explore App</span></button
                 ></a
             >
-            <a href="https://docs.google.com/document/d/1pK9j0opoE6Q1pyFtj7D-SGeagLI6br576WdbEQgN_Yc/edit?usp=sharing"
+            <a
+                href="https://docs.google.com/document/d/1pK9j0opoE6Q1pyFtj7D-SGeagLI6br576WdbEQgN_Yc/edit?usp=sharing"
                 ><button class="sysdocs"><span>System Docs</span></button></a
             >
         </div>
@@ -141,7 +161,7 @@
 
 <style lang="scss">
     .layout-1 {
-        min-height: 85vh;
+        height: 80vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -152,30 +172,36 @@
         flex-grow: 1;
         padding: 1.25rem;
     }
-    .hero-title {
-        user-select: none;
-    }
+
     .subheading {
         font-size: clamp(0.75rem, 1vw + 0.75rem, 2rem);
         font-weight: 500;
         text-shadow: 0px 3px 10.8px rgba(0, 0, 0, 0.096);
-        line-height: 150%;
+        line-height: 140%;
         span {
             font-size: clamp(0.75rem, 1vw + 0.75rem, 1.375rem);
         }
     }
     h1 {
-        font-size: clamp(2.25rem, 2vw + 2rem, 4rem);
-        font-weight: 500;
-        line-height: 150%;
-        text-shadow: 0px 3px 10.8px rgba(0, 0, 0, 0.25);
+        font-size: clamp(1.5rem, 2vw + 2rem, 10rem);
+        font-weight: 600;
+        // text-shadow: 0px 3px 10.8px rgba(0, 0, 0, 0.25);
         font-family: "Share Tech";
+        span {
+            font-family: inherit;
+            font-size: clamp(1.5rem, 2vw + 1.5rem, 3rem);
+        }
     }
     .hero-section {
         display: grid;
         grid-auto-flow: column;
     }
-
+    .hero-title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
     .hero-img {
         display: flex;
         justify-content: flex-end;
@@ -192,9 +218,9 @@
     }
 
     .button-wrapper {
-        margin-top: 2rem;
         display: flex;
         gap: 1rem;
+        margin-top: 1rem;
         a {
             text-decoration: none;
         }
@@ -289,7 +315,7 @@
     @media (max-width: 480px) {
         .button-wrapper {
             width: 100%;
-            margin-top: 2rem;
+            margin-top: 1rem;
             display: flex;
             flex-direction: column-reverse;
             gap: 1rem;
@@ -300,14 +326,25 @@
                 width: 100%;
             }
         }
-        a {   
+        a {
             text-decoration: none;
         }
         .explore-button {
             width: 100%;
         }
-        br {
+        .subheading br {
             display: none;
+        }
+        .hero-title .subheading {
+            line-height: 180%;
+            text-align: left;
+        }
+        .hero-title h1 {
+            font-size: 3rem;
+            text-align: left;
+            span {
+                font-size: inherit;
+            }
         }
     }
 </style>

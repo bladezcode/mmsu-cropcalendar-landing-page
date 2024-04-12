@@ -72,10 +72,15 @@ const { title, subtitle, image, imageposition, content, h1class, headercolor } =
             }
         }
       
+        
         .wrapper {
             max-width: 90rem;
             flex: 1;
             padding: 2rem 1rem;
+        }
+        .content .wrapflex {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
         }
         .content {
             display: flex;
@@ -110,10 +115,14 @@ const { title, subtitle, image, imageposition, content, h1class, headercolor } =
              
         </div>
         <div class="content">
-           <div class="wrapper">
+           <div class="wrapper wrapflex">
                 <p>
                 <slot />
                 </p>
+            <div class="featured">
+               featured sidebar
+
+            </div>
            </div>
             
         </div>
