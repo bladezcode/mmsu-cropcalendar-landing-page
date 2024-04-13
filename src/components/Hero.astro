@@ -41,7 +41,7 @@
                 },
                 particles: {
                     number: {
-                        value: 70,
+                        value: 80,
                         density: {
                             enable: true,
                             value_area: 800,
@@ -110,15 +110,16 @@
                 <h1>
                     <!-- A Comparative Analysis of <br /> Machine Learning Algorithm <br
                     />and Hybrid Algorithm For <br /> Crop Calendar Prediction -->
-                    Empowering MMSU Farmers: <br />
+                    Empowering <br class="aftermmsu" /> MMSU Farmers: <br />
                     <span>Smarter Decisions, Bountiful Harvest</span>
                 </h1>
                 <p class="subheading">
                     <span
-                        >A Thesis Research Study on Enhancing Precision
-                        Agriculture at <br />MMSU i4.0: A Comparative Analysis
-                        of Machine Learning Algorithm <br />and Hybrid Algorithm
-                        For Crop Calendar Prediction</span
+                        >A Thesis Research Study on <span style="color:#195826;"
+                            >Enhancing Precision Agriculture at <br />MMSU i4.0:
+                            A Comparative Analysis of Machine Learning Algorithm <br
+                            />and Hybrid Algorithm For Crop Calendar Prediction</span
+                        ></span
                     >
                 </p>
             </div>
@@ -148,12 +149,12 @@
         <div class="button-wrapper">
             <a href="/app"
                 ><button class="explore-button">
-                    <span>Explore App</span></button
+                    <span>Start Now</span></button
                 ></a
             >
             <a
                 href="https://docs.google.com/document/d/1pK9j0opoE6Q1pyFtj7D-SGeagLI6br576WdbEQgN_Yc/edit?usp=sharing"
-                ><button class="sysdocs"><span>System Docs</span></button></a
+                ><button class="sysdocs"><span>Documentation</span></button></a
             >
         </div>
     </div>
@@ -201,6 +202,9 @@
         flex-direction: column;
         justify-content: center;
         gap: 1rem;
+        .aftermmsu {
+            display: none;
+        }
     }
     .hero-img {
         display: flex;
@@ -225,19 +229,23 @@
             text-decoration: none;
         }
     }
-    .explore-button {
+    .explore-button,
+    .sysdocs {
         border: none;
         display: flex;
-        padding: 1.25rem 3.125rem;
+        
         justify-content: center;
         align-items: center;
         gap: 0.625rem;
 
-        border-radius: 1.125rem;
+        border-radius: 0.375rem;
+    }
+    .explore-button {
+        padding: 1rem 3.55rem;
         background: linear-gradient(
-            180deg,
-            #1e2320 0%,
-            rgba(30, 35, 32, 0.69) 100%
+            87deg,
+            #1e2320 1.58%,
+            rgba(30, 35, 32, 0.69) 99.69%
         );
 
         span {
@@ -248,18 +256,14 @@
     button:hover {
         box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.25);
         transform: scale(1.025);
-        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition: all 0.5s ease;
+    }
+    button:not(:hover) {
+        transition: all 1s ease;
     }
     .sysdocs {
-        border: none;
-        display: flex;
-        padding: 1.25rem 2.125rem;
-        justify-content: center;
-        align-items: center;
-        gap: 0.625rem;
-
-        border-radius: 1.125rem;
-        border: 2px solid #717171;
+        padding: 1rem 2rem;
+        outline: 2px solid #717171;
         background: linear-gradient(
             180deg,
             #d8d8d8 0%,
@@ -344,6 +348,9 @@
             text-align: left;
             span {
                 font-size: inherit;
+            }
+            .aftermmsu {
+                display: block;
             }
         }
     }

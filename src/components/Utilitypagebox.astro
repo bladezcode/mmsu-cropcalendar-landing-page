@@ -1,8 +1,8 @@
 ---
-const { content, title, image, link } = Astro.props;
+const { content, title, image, link, hovered, hoveredstyle } = Astro.props;
 ---
 
-<div class="container">
+<div class="container"  x-bind:class={hoveredstyle} @mouseenter={hovered}>
     <div class="frame">
         <svg
             width="100%"
@@ -29,12 +29,19 @@ const { content, title, image, link } = Astro.props;
 </div>
 
 <style lang="scss">
-    .container:hover {
+    .containerstyle {
         transform: translate(-15px, -15px);
-        transition: ease 1s;
+        transition: all 1s ease;
         svg path {
             filter: drop-shadow(13px 12px 0px #484848);
-            transition: ease 1s;
+            // transition: ease 1s;
+            transition: all 1s ease;
+        }
+    }
+    .container:not(:hover) {
+        transition: all 1s ease;
+        svg path {
+            transition: all 1s ease;
         }
     }
     .container {
