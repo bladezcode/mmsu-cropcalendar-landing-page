@@ -24,7 +24,7 @@
                 cx="17"
                 cy="17"
                 r="15.5"
-                fill="#1E1E1E"
+                fill="#ffffff00"
                 stroke="white"
                 stroke-width="3"></circle>
             <circle cx="17" cy="17" r="6" fill="white"></circle>
@@ -335,7 +335,14 @@
             display: none;
         }
     }
-
+    .item_bullet:hover {
+        .item {
+            text-decoration: underline;
+            text-decoration-color: #30e2ed;
+            text-underline-offset: 0.5rem;
+            text-decoration-thickness: 1px;
+        }
+    }
     .item {
         padding: 1rem;
 
@@ -356,7 +363,7 @@
             padding: 0 1.25rem;
             flex-shrink: 1;
             .item_bullet {
-                gap: .2rem;
+                gap: 0.2rem;
             }
             svg {
                 display: none;
