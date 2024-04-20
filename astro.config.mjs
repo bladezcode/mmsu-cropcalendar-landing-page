@@ -1,7 +1,8 @@
 import { defineConfig } from 'astro/config';
 import tunnel from "astro-tunnel";
-
 import sitemap from "@astrojs/sitemap";
+
+import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,5 +20,6 @@ export default defineConfig({
     verifyTLS: false,
     // Whether to accept the Cloudflare terms of service. Defaults to false.
     acceptCloudflareNotice: true
-  }), sitemap()]
+  }), sitemap(), mdx()]
+  
 });

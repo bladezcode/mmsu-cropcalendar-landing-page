@@ -153,7 +153,8 @@
                 ></a
             >
             <a
-                href="https://docs.google.com/document/d/1pK9j0opoE6Q1pyFtj7D-SGeagLI6br576WdbEQgN_Yc/edit?usp=sharing"
+                href="/docs"
+               
                 ><button class="sysdocs"><span>Documentation</span></button></a
             >
         </div>
@@ -171,7 +172,7 @@
     .layout-container {
         max-width: 1440px;
         flex-grow: 1;
-        padding: 1.25rem;
+        padding: 2.95rem 1.25rem 0 1.25rem;
     }
 
     .subheading {
@@ -233,7 +234,7 @@
     .sysdocs {
         border: none;
         display: flex;
-        
+
         justify-content: center;
         align-items: center;
         gap: 0.625rem;
@@ -344,7 +345,7 @@
             text-align: left;
         }
         .hero-title h1 {
-            font-size: 3rem;
+            font-size: clamp(1.5rem, 3vw + 2rem, 3rem);
             text-align: left;
             span {
                 font-size: inherit;
