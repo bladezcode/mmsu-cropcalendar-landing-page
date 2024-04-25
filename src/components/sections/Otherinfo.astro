@@ -38,8 +38,6 @@ import Cards from "../Cards.astro";
         >
             <svg
                 class="blck"
-                width="313"
-                height="222"
                 viewBox="0 0 313 222"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -227,7 +225,6 @@ import Cards from "../Cards.astro";
                 font-size: 3rem;
                 font-size: clamp(2rem, 2vw + 1rem, 3.5rem);
                 font-family: "Share Tech Mono";
-                
             }
             .cards {
                 padding: 1.5rem;
@@ -239,6 +236,9 @@ import Cards from "../Cards.astro";
             @media screen and (max-width: 800px) {
                 .container .cards {
                     grid-template-columns: repeat(1, 1fr);
+                }
+                .cards {
+                    padding: 1.5rem;
                 }
             }
         </style>
