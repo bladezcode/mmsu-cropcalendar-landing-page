@@ -28,7 +28,7 @@ import WeatherSelectedcontent from "../WeatherSelectedcontent.astro";
                 <span style="color: #30E2ED;">Climatic Data</span>
                 <br /> from Local
                 <span style="color: #30E2ED;">PAG-ASA</span>
-                <br /> Agrometeorological Station
+                <br /> Agrometeorological <br> Station
             </h2>
         </div>
         <div class="weather_inputs_page">
@@ -71,13 +71,12 @@ import WeatherSelectedcontent from "../WeatherSelectedcontent.astro";
     .title {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
         color: #fff;
-        padding: 0 3rem;
-
+        flex: 1;
+        padding-left: 2rem;
         h2,
         span {
-            font-size: clamp(1.35rem, 2vw + 1rem, 3.5rem);
+            font-size: clamp(1.75rem, 2vw + 1rem, 3.5rem);
             text-align: left;
             font-family: "Share Tech Mono";
         }
@@ -94,6 +93,9 @@ import WeatherSelectedcontent from "../WeatherSelectedcontent.astro";
         }
         .realtime_section .realtime_inputs_page {
         gap: 0;
+        .title {
+            padding-left: 1rem;
+        }
     }
     }
 
